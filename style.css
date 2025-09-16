@@ -1,0 +1,196 @@
+:root {
+    --primary-color: #b58d6f;
+    --text-color: #4a2c2a;
+    --bg-color: #f8f5f0;
+    --accent-color: #fff5e6;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background: url('background-texture.png') center/cover no-repeat fixed;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 🎀 Invitation Card */
+.card-container {
+    width: 95%;
+    max-width: 800px;
+    min-height: 100vh;
+    background: var(--accent-color) url('border-top.png') center/cover no-repeat;
+    border: 10px solid var(--primary-color);
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    position: relative;
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Inner Pages */
+.card-page {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 1rem;
+    animation: fadeIn 1.2s ease forwards;
+}
+.card-page.active {
+    display: flex;
+}
+
+/* Content wrapper */
+.content-wrapper {
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+}
+
+/* 🕉 Intro page */
+.ganesha-img {
+    width: clamp(120px, 25vw, 200px);
+    margin-bottom: 0.8rem;
+    animation: rotateIn 2s forwards;
+}
+.ganesh-mantra {
+    font-size: clamp(1rem, 4vw, 1.6rem);
+    font-family: 'Great Vibes', cursive;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+    animation: fadeIn 2s 0.8s forwards;
+}
+
+/* ✨ Event Details */
+.invitation-text {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+.event-title {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.couple-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin: 0.5rem 0 1.5rem 0;
+    color: var(--primary-color);
+}
+.date-time-venue p {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+}
+
+/* 👨‍👩‍👧‍👦 Family Details */
+#family-details .person-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    color: var(--primary-color);
+}
+.relation {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.parents {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.with {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+/* 📅 Save the Date */
+.save-the-date-img {
+    width: clamp(150px, 40vw, 250px);
+    margin-bottom: 1rem;
+}
+.save-date-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(2rem, 8vw, 3.2rem);
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+.save-date-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* 🎵 Music Button */
+#music-control {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#music-icon {
+    font-size: 1.2rem;
+}
+
+/* ⬅️➡️ Navigation */
+.navigation-buttons {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+}
+.navigation-buttons button {
+    background: rgba(255,255,255,0.8);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+.navigation-buttons button:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes rotateIn {
+    from { opacity: 0; transform: scale(0.5) rotate(-90deg);}
+    to { opacity: 1; transform: scale(1) rotate(0);}
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .card-container {
+        padding: 1rem;
+        border-width: 6px;
+    }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.2rem; }
+    p { font-size: 0.95rem; }
+    #music-control {
+        width: 2rem;
+        height: 2rem;
+    }
+}

@@ -21,7 +21,7 @@ body {
 .card-container {
     width: 95%;
     max-width: 800px;
-    min-height: 100vh;
+    min-height: 80vh;
     background: var(--accent-color) url('border-top.png') center/cover no-repeat;
     border: 10px solid var(--primary-color);
     border-radius: 25px;
@@ -70,7 +70,7 @@ body {
 
 /* ✨ Event Details */
 .invitation-text {
-    font-size: 1rem;
+    font-size: 2rem;
     letter-spacing: 2px;
     margin-bottom: 0.5rem;
 }
@@ -93,16 +93,16 @@ body {
 /* 👨‍👩‍👧‍👦 Family Details */
 #family-details .person-name {
     font-family: 'Great Vibes', cursive;
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-size: clamp(2rem, 5vw, 2.5rem);
     color: var(--primary-color);
 }
 .relation {
     margin: 0.3rem 0;
-    font-size: 1rem;
+    font-size: 2rem;
     letter-spacing: 1px;
 }
 .parents {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.6;
 }
 .with {
@@ -187,8 +187,8 @@ body {
         border-width: 6px;
     }
     h1 { font-size: 1.6rem; }
-    h2 { font-size: 1.2rem; }
-    p { font-size: 0.95rem; }
+    h2 { font-size: 1.3rem; }
+    p { font-size: 1rem; }
     #music-control {
         width: 2rem;
         height: 2rem;
